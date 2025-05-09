@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Sierra y Olivo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/minilogo.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <div class="logo-centro">
+            <img src="img/Logo-transparente.png" alt="Logo Sierra y Olivo" class="logo" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="variedades.html">Variedades</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" class="activo">Contacto</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="seccion-contenedor formulario-contacto">
+            <h2>Contacto</h2>
+            <p>¿Tienes dudas, sugerencias o simplemente quieres saludarnos? Rellena el siguiente formulario:</p>
+
+            <form>
+                <fieldset>
+                    <legend>Información personal</legend>
+
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="50" size="30" required>
+
+                    <label for="empresa">Empresa (opcional):</label>
+                    <input type="text" id="empresa" name="empresa" maxlength="50" size="30">
+
+                    <label for="email">Dirección de correo:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" cols="50" placeholder="Escribe aquí tu mensaje o consulta..." required></textarea>
+
+                    <label for="color">Selecciona el color del texto del mensaje:</label>
+                    <input type="color" id="color" name="color" value="#000000">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sierra y Olivo</legend>
+
+                    <p><strong>Dirección:</strong> Carretera del Olivar, 12, 23370 Orcera, Jaén, España</p>
+                    <p><strong>Teléfono:</strong> +34 600 123 456</p>
+                    <p><strong>Página web:</strong> <a href="https://www.sierrayolivo.com" target="_blank">www.sierrayolivo.com</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:contacto@sierrayolivo.com">contacto@sierrayolivo.com</a></p>
+                </fieldset>
+
+                <div class="botones-formulario">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Borrar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="seccion-contenedor mapa">
+            <h2>Encuéntranos</h2>
+            <p>Visítanos en nuestra ubicación:</p>
+            <div class="mapa-google">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1377.5733028913778!2d-2.6758912681792797!3d38.32334399581581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzjCsDE5JzI0LjAiTiAywrA0MCcyOS42Ilc!5e1!3m2!1ses!2ses!4v1744567013059!5m2!1ses!2ses"
+                    width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sierra y Olivo S.L. - Todos los derechos reservados</p>
+        <p>Desarrollado como parte del proyecto de Lenguaje de Marcas y Transformación Digital - ASIR</p>
+    </footer>
+
+    <script>
+        const colorPicker = document.getElementById('color');
+        const mensaje = document.getElementById('mensaje');
+
+        colorPicker.addEventListener('input', () => {
+            mensaje.style.color = colorPicker.value;
+        });
+    </script>
+</body>
+
+</html>

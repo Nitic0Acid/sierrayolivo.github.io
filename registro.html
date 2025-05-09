@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Tu Nombre - ASIR 2024/25" />
+    <meta name="description" content="Formulario de registro de usuario en Sierra y Olivo" />
+    <meta name="keywords" content="registro, alta, usuario, sierra y olivo, aceite, ecológico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro - Sierra y Olivo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="img/minilogo.png" type="image/png" />
+</head>
+
+<body>
+    <header>
+        <div class="logo-centro">
+            <img src="img/Logo-transparente.png" alt="Logo Sierra y Olivo" class="logo" />
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="variedades.html">Variedades</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="formulario">
+            <h2>Registro</h2>
+            <p>Por favor, completa el formulario para registrarte en nuestra plataforma.</p>
+            <form action="#" method="post" enctype="multipart/form-data">
+              <fieldset>
+                <legend>Información Personal</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          
+                <label for="primer-apellido">Primer Apellido:</label>
+                <input type="text" id="primer-apellido" name="primer-apellido" placeholder="Tu primer apellido" required />
+          
+                <label for="segundo-apellido">Segundo Apellido:</label>
+                <input type="text" id="segundo-apellido" name="segundo-apellido" placeholder="Tu segundo apellido" />
+          
+                <label for="genero">Género:</label>
+                <div class="radio-group">
+                  <label>
+                    <input type="radio" name="genero" value="masculino" required />
+                    Masculino
+                  </label>
+                  <label>
+                    <input type="radio" name="genero" value="femenino" />
+                    Femenino
+                  </label>
+                  <label>
+                    <input type="radio" name="genero" value="otro" />
+                    Otro
+                  </label>
+                </div>
+          
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required />
+              </fieldset>
+          
+              <fieldset>
+                <legend>Dirección</legend>
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Tu dirección" required />
+          
+                <label for="cp">Código Postal:</label>
+                <input type="text" id="cp" name="cp" placeholder="Tu código postal" required />
+          
+                <label for="provincia">Provincia:</label>
+                <select id="provincia" name="provincia" required>
+                  <option value="">Selecciona tu provincia</option>
+                  <option value="andalucia">Andalucía</option>
+                  <option value="aragon">Aragón</option>
+                  <option value="asturias">Asturias</option>
+                  <option value="baleares">Islas Baleares</option>
+                  <option value="canarias">Canarias</option>
+                  <option value="cantabria">Cantabria</option>
+                  <option value="castilla-la-mancha">Castilla-La Mancha</option>
+                  <option value="castilla-y-leon">Castilla y León</option>
+                  <option value="cataluna">Cataluña</option>
+                  <option value="extremadura">Extremadura</option>
+                  <option value="galicia">Galicia</option>
+                  <option value="madrid">Madrid</option>
+                  <option value="murcia">Murcia</option>
+                  <option value="navarra">Navarra</option>
+                  <option value="pais-vasco">País Vasco</option>
+                  <option value="rioja">La Rioja</option>
+                </select>
+          
+                <label for="pais">País:</label>
+                <input type="text" id="pais" name="pais" placeholder="Tu país" required />
+              </fieldset>
+          
+              <fieldset>
+                <legend>Datos de Usuario</legend>
+                <label for="nick">Nick:</label>
+                <input type="text" id="nick" name="nick" placeholder="Tu nick" required />
+          
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="Crea una contraseña" required />
+          
+                <label for="imagen">Sube una imagen:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*" />
+              </fieldset>
+
+              <fieldset>
+                <legend>Subscríbete a nuestra Newsletter</legend>
+                <p>Selecciona los temas que te interesan para recibir nuestras novedades:</p>
+                <div class="checkbox-group">
+                  <label>
+                    <input type="checkbox" name="temas-newsletter" value="ofertas" />
+                    Ofertas
+                  </label>
+                  <label>
+                    <input type="checkbox" name="temas-newsletter" value="recetas" />
+                    Recetas
+                  </label>
+                  <label>
+                    <input type="checkbox" name="temas-newsletter" value="curiosidades" />
+                    Curiosidades
+                  </label>
+                </div>
+                <div class="checkbox-group">
+                  <label>
+                    <input type="checkbox" id="no-suscribirme" name="no-suscribirme" />
+                    No quiero suscribirme a la newsletter
+                  </label>
+                </div>
+              </fieldset>
+          
+              <div class="botones-formulario">
+                <button type="submit">Registrar</button>
+                <button type="reset">Limpiar</button>
+              </div>
+            </form>
+          </section>
+    </main>
+
+    <footer> <!-- Aqui le cascamos el pie de pagina y si me apetece lo trabajo mas y sino pos asi se queda-->
+        <p>&copy; 2025 Sierra y Olivo S.L. - Todos los derechos reservados</p>
+        <p>Desarrollado como parte del proyecto de Lenguaje de Marcas y Transformación Digital - ASIR</p>
+      </footer>
+</body>
+
+</html>
